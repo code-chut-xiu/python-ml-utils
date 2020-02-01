@@ -45,3 +45,41 @@ matrix_sparse = sparse.csr_matrix(matrix)
 
 print("Below is a sparsed matrix")
 print(matrix_sparse)
+
+# Create larger matrix
+matrix_large = np.array([
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [3, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
+
+# Create compressed sparse row (CSR) matrix
+matrix_large_sparse = sparse.csr_matrix(matrix_large)
+
+print("Below is also a sparsed matrix")
+print(matrix_large_sparse)
+
+# Create a row vector
+vector = np.array([1, 2, 3, 4, 5, 6])
+# Create a matrix
+matrix = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+# Select the 3rd element of the vector
+print(vector[2])
+# Select the 2nd row, 2nd column of the matrix
+print(matrix[1, 1])
+# Select all elements of the vector
+print(vector[:])
+# Select everything up to and including the 3rd element of the vector
+print(vector[:3])
+# Select everything after the 3rd element
+print(vector[3:])
+# Select the last element of the vector
+print(vector[-1])
+# Select the 1st 2 rows and all columns of the matrix
+print(matrix[:2, :])
+# Select all rows and second column of the matrix
+print(matrix[:, 1:2])
+
